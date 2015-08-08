@@ -84,8 +84,18 @@
 				<span><img src="images/leftico02.png" /></span>商品管理
 			</div>
 			<ul class="menuson">
-				<li><cite></cite><a href="${pageContext.request.contextPath }/pages/backend/goods/getAllgoods.do" target="rightFrame">查询商品</a><i></i></li>
-				<li><cite></cite><a href="${pageContext.request.contextPath }/pages/backend/goods/add.jsp" target="rightFrame">新增商品</a><i></i></li>
+				<li><cite></cite><a href="${pageContext.request.contextPath }/pages/backend/goods/queryInput.jsp" target="rightFrame">查询商品</a><i></i></li>
+				<li><cite></cite><a href="${pageContext.request.contextPath }/pages/backend/goods/getAllgoodsByPage.do?currentPage=1" target="rightFrame">浏览商品</a><i></i></li>
+				<li><cite></cite><a href="${pageContext.request.contextPath }/pages/backend/goods/addInput.jsp" target="rightFrame">新增商品</a><i></i></li>
+			</ul>
+		</dd>
+		<dd>
+			<div class="title">
+				<span><img src="images/leftico02.png" /></span>供应商管理
+			</div>
+			<ul class="menuson">
+				<li><cite></cite><a href="${pageContext.request.contextPath }/pages/backend/suppliers/getAllSuppliersByPage.do?currentPage=1" target="rightFrame">浏览供应商</a><i></i></li>
+				<li><cite></cite><a href="${pageContext.request.contextPath }/pages/backend/suppliers/addInput.jsp" target="rightFrame">添加供应商</a><i></i></li>
 			</ul>
 		</dd>
 		<dd>

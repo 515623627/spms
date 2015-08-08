@@ -8,6 +8,8 @@ import org.hibernate.Criteria;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.DetachedCriteria;
 
+import com.spms.util.PageBean;
+
 /**
  * 定义了基本CURD操作的接口
  * @author Bert 强伟伟
@@ -54,7 +56,7 @@ public interface BaseDAO<T,PK extends Serializable> {
 	 * 根据id删除一个对象
 	 * @param id
 	 */
-	public void delelteById(Class clazz,PK id);
+	public void delelteById(Class<T> clazz,PK id);
 	
 	/**
 	 * 删除多个对象
@@ -68,21 +70,21 @@ public interface BaseDAO<T,PK extends Serializable> {
 	 * @param id
 	 * @return
 	 */
-	public boolean exists(Class clazz,PK id);
+	public boolean exists(Class<T> clazz,PK id);
 	
 	/**
 	 * 根据id加载一个对象
 	 * @param id
 	 * @return
 	 */
-	public T load(Class clazz,PK id);
+	public T load(Class<T> clazz,PK id);
 	
 	/**
 	 * 根据id获取一个对象
 	 * @param id
 	 * @return
 	 */
-	public T get(Class clazz,PK id);
+	public T get(Class<T> clazz,PK id);
 	
 	/**
 	 * 获取对象总条数
@@ -202,13 +204,22 @@ public interface BaseDAO<T,PK extends Serializable> {
 
 	/**
 	 * 分页查询
-	 * @param criteria
-	 * @param pageNo
+	 * @param object
+	 * @param currentPage
+	 * @param pageSize
+	 * @param crts
+	 * @return
+	 */
+	public PageBean findPage(Object object, int currentPage, int pageSize,
+			List<Criterion> crts);
+	
+	/**
+	 * 分页查询
+	 * @param object
+	 * @param currentPage
 	 * @param pageSize
 	 * @return
 	 */
-	public List<T> findPage(Criteria criteria, int pageNo, int pageSize);
-
-	
+	public PageBean findPage(Object object, int currentPage, int pageSize);
 	
 }

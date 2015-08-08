@@ -108,6 +108,11 @@ h2{font-weight:normal;}
 .toolbar1 li span{float:left; margin-left:10px; margin-right:5px; margin-top:5px;}
 .tablelist{border:solid 1px #cbcbcb; width:100%; clear:both;}
 .tablelist th{background:url(../images/th.gif) repeat-x; height:34px; line-height:34px; border-bottom:solid 1px #b6cad2; text-indent:11px; text-align:left;}
+
+.tablelist .checkbox_format{width: 40px;}
+.tablelist .string_format{width: 120px;}
+.tablelist .int_format{width: 100px;}
+
 .tablelist td{line-height:35px; text-indent:11px; border-right: dotted 1px #c7c7c7;}
 .tablelink{color:#056dae;}
 .tablelist tbody tr.odd{background:#f5f8fa;}
@@ -130,6 +135,7 @@ h2{font-weight:normal;}
 .pagin .paginList .paginItem.more a{color:#737373;}
 .pagepre{background:url(../images/pre.gif) no-repeat center center; width:31px; height:28px;}
 .pagenxt{background:url(../images/next.gif) no-repeat center center; width:31px; height:28px;}
+.noresult{text-align: center;color: red;}
 
 /*index*/
 .mainindex{padding:20px; overflow:hidden;}

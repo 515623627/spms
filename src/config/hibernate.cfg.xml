@@ -22,7 +22,6 @@
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
 
-		<mapping resource="com/spms/entity/Goods.hbm.xml" />
 		<mapping resource="com/spms/entity/TReturngoodsinfo.hbm.xml" />
 		<mapping resource="com/spms/entity/TPromotioninfo.hbm.xml" />
 		<mapping resource="com/spms/entity/TGoodsbaseinfo.hbm.xml" />

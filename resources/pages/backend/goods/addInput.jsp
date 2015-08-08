@@ -77,8 +77,9 @@
 			 -->
 			<li><label>商品备注</label>
 			<textarea name="remarks" cols="" rows="" class="textinput"></textarea></li>
-			<li><label>&nbsp;</label><input name="" type="button"
-				class="btn" value="确认保存" /></li>
+			<li>
+				<label>&nbsp;</label>
+			</li>
 		</ul>
 		<input type="submit" class="btn" value="确认保存">
 		</form>

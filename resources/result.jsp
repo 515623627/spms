@@ -22,30 +22,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	src="${pageContext.request.contextPath }/js/jquery.js"></script>
   </head>
   
-  <script>
-  	function postCommit(){
-  		var myForm = $("testForm");
-  		var url = "http://localhost:8080/spms/result.jsp";
-  		myForm.action = url;
-  		var newWindow = window.open("about:blank",
-  									"newWindow",
-  									"height=400, width=400, top=300, left=300,location=yes, status=yes"); 
-  		myForm.target = "newWindow";
-  		myForm.submit();
-  		newWindow.focus();
-  		
-  	}
-  	
-  </script>
   <body>
     This is my JSP page. <br>
-    <a href="pages/front/goods/index.jsp">test</a>
-    <form id="testForm" method="post">
-    	<input type="text" name="name" value="tom"/>
-    	<input type="text" name="age" value="20"/>
-    </form>
-    <br/>
-    
-    <button onclick="postCommit()">submit</button>
+    <%
+    	String name = request.getParameter("name");
+    	String age = request.getParameter("age");
+    	System.out.println("**********"+name);
+    %>
+    <%=name %><br/>
+    <%=age %><br/>
+    name:${name }
   </body>
 </html>
